@@ -34,7 +34,7 @@ function pickWinner(humanChoice, computerChoice) {
     winner = 'Computer won, womp womp :(';
   }
   else if (humanChoice=='Paper' && computerChoice=='Paper') {
-    winner = 'You are tied :|';
+    winner = 'You are tied :| ';
   }
   else if (humanChoice=='Scissors' && computerChoice=='Paper') {
     winner = 'You won, woohoo :D';
