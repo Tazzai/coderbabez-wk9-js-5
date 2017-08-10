@@ -57,5 +57,4 @@ function pickWinner(humanChoice, computerChoice) {
   else if (humanChoice=='Scissors' && computerChoice=='Rock'){
     winner = 'computer';
   }
-    winner = 'computer';
-  }
+}
