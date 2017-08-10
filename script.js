@@ -15,11 +15,27 @@ $("document").ready(function() {
       // You'll need to complete the pickWinner function.
       $('#winnerDisplay').html(z);
       // Display the winner (human or computer) in the winnerDisplay section
+      var a = displayMessage (z);
+      $ ('#winnerDisplay').html(a);
       // Display a different message depending on if the human or computer won or it was a tie
   })
 });
 
+function displayMessage (z) {
+  var message;
+  if (z=='Computer won, womp womp :(') {
+    message = 'Oh no, computer won.';
+  }
 
+  else if (z=='You are tied :|') {
+    message = 'Meh. Tied!';
+  }
+
+  else if (z=='You won, woohoo :D'){
+    message = 'OMG. You won!';
+  }
+  return message;
+}
 
 function computerChoice() {
   var i = Math.floor((Math.random() * 3));
@@ -34,7 +50,7 @@ function pickWinner(humanChoice, computerChoice) {
     winner = 'Computer won, womp womp :(';
   }
   else if (humanChoice=='Paper' && computerChoice=='Paper') {
-    winner = 'You are tied :| ';
+    winner = 'You are tied :|';
   }
   else if (humanChoice=='Scissors' && computerChoice=='Paper') {
     winner = 'You won, woohoo :D';
