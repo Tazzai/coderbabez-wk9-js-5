@@ -13,7 +13,7 @@ $("document").ready(function() {
       // Save the winner in a variable.
       var z = pickWinner (x, y);
       // You'll need to complete the pickWinner function.
-$('#winnerDisplay').html(z);
+      $('#winnerDisplay').html(z);
       // Display the winner (human or computer) in the winnerDisplay section
       // Display a different message depending on if the human or computer won or it was a tie
   })
@@ -31,30 +31,31 @@ function pickWinner(humanChoice, computerChoice) {
   // Return 'Human', 'Computer', or 'Tie'
   var winner;
   if (humanChoice=='Rock'&& computerChoice=='Paper') {
-    winner = 'computer';
+    winner = 'Computer won, womp womp :(';
   }
   else if (humanChoice=='Paper' && computerChoice=='Paper') {
-    winner = 'tie';
+    winner = 'You are tied :|';
   }
   else if (humanChoice=='Scissors' && computerChoice=='Paper') {
-    winner = 'human';
+    winner = 'You won, woohoo :D';
   }
   else if (humanChoice=='Rock' && computerChoice=='Scissors')  {
-    winner = 'human';
+    winner = 'You won, woohoo :D';
   }
   else if (humanChoice=='Paper' && computerChoice=='Scissors') {
-    winner = 'computer';
+    winner = 'Computer won, womp womp :(';
   }
   else if (humanChoice=='Scissors' && computerChoice=='Scissors'){
-    winner = 'tie';
+    winner = 'You are tied :|';
   }
   else if (humanChoice=='Rock' && computerChoice=='Rock'){
-    winner = 'tie';
+    winner = 'You are tied :|';
   }
   else if (humanChoice=='Paper' && computerChoice=='Rock'){
-    winner = 'human';
+    winner = 'You won, woohoo :D';
   }
   else if (humanChoice=='Scissors' && computerChoice=='Rock'){
-    winner = 'computer';
+    winner = 'Computer won, womp womp :(';
   }
+  return winner;
 }
