@@ -5,7 +5,6 @@ $("document").ready(function() {
       console.log($(this).html());
       var x = $(this).html();
       console.log(x);
-
       // Get the computer's choice from the computerChoice function
       var y = computerChoice();
       console.log(y);
@@ -55,11 +54,8 @@ function pickWinner(humanChoice, computerChoice) {
   else if (humanChoice=='Paper' && computerChoice=='Rock'){
     winner = 'human';
   }
-  else if {humanChoice=='Scissors' && computerChoice=='Rock'{
+  else if (humanChoice=='Scissors' && computerChoice=='Rock'){
     winner = 'computer';
   }
-
-  }
-  return winner;
-
+    winner = 'computer';
   }
